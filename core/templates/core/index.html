@@ -7,5 +7,17 @@
             Você pertence a seguinte empresa: 
             {{ usuario.funcionario.empresa.nome }}
         </p>
+        <p>
+            <a href="{% url 'empresas:edit_empresa' usuario.funcionario.empresa.id %}">
+                Clique aqui para editar sua empresa
+            </a>
+        </p>
+        <p>
+            <a href="{% url 'logout' %}">
+                Clique aqui para fazer logout
+            </a>
+        </p>
+        {% else %}
+        <a href="{% url 'empresas:create_empresa' %}">Criar empresa</a>
     {% endif %}
 {% endblock main %}
