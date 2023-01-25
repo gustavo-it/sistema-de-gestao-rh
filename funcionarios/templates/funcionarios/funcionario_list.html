@@ -10,5 +10,7 @@
             Deletar
         </a>
     {% endfor %}
-    
+    <a href="{% url 'funcionarios:create' %}" class="btn btn-info">
+        Novo funcionário
+    </a>
 {% endblock main %}
