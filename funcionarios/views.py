@@ -1,5 +1,5 @@
-from django.views.generic import ListView, UpdateView
-
+from django.views.generic import DeleteView, ListView, UpdateView
+from django.urls import reverse_lazy
 from .models import Funcionario
 
 
@@ -14,3 +14,7 @@ class FuncionariosList(ListView):
 class FuncionarioEdit(UpdateView):
     model = Funcionario
     fields = ['nome', 'departamentos',]
+    
+class FuncionarioDelete(DeleteView):
+    model = Funcionario
+    success_url = reverse_lazy('funcionarios:list')
