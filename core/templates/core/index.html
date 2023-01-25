@@ -17,6 +17,9 @@
                 Clique aqui para fazer logout
             </a>
         </p>
+        <p>
+            <a href="{% url 'funcionarios:list' %}">Gerenciar Funcionários</a>
+        </p>
         {% else %}
         <a href="{% url 'empresas:create_empresa' %}">Criar empresa</a>
     {% endif %}

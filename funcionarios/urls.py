@@ -1,9 +1,9 @@
-from django.urls import include, path
+from django.urls import path
 
-from .views import home
+from .views import FuncionariosList
 
 app_name = 'funcionarios'
 
 urlpatterns = [
-    path('', home),
+    path('', FuncionariosList.as_view(), name='list'),
 ]
