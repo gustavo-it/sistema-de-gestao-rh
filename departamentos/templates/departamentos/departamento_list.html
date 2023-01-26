@@ -5,7 +5,7 @@
         <a href="">
             {{ departamento }}
         </a>
-        <a href="">
+        <a href="{% url 'departamentos:delete' departamento.id %}">
             Delete
         </a>
         <br />
