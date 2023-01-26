@@ -2,7 +2,7 @@
 
 {% block main %}
     {% for departamento in object_list %}
-        <a href="">
+        <a href="{% url 'departamentos:update' departamento.id %}">
             {{ departamento }}
         </a>
         <a href="{% url 'departamentos:delete' departamento.id %}">
