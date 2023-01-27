@@ -133,3 +133,4 @@ gunicorn-error-log
 db.sqlite3
 static/
 gunicorn-error-log
+*.txt
