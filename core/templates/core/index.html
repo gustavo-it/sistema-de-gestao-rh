@@ -23,6 +23,7 @@
         <p>
             <a href="{% url 'departamentos:list' %}">Gerenciar Departamentos</a>
         </p>
+        <p><a href="{% url 'registro_hora_extra:list' %}">Gerenciar banco de horas</a></p>
         {% else %}
         <a href="{% url 'empresas:create_empresa' %}">Criar empresa</a>
     {% endif %}

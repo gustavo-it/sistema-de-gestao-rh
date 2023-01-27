@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    <h1>Banco de horas</h1>
+    {% for registro_he in object_list %}
+        {% comment %} <a href="{% url 'funcionarios:update' registro_he.id %}">
+            {{ registro_he.nome }}
+        </a>
+        <a href="{% url 'funcionarios:delete' registro_he.id %}">
+            Deletar
+        </a> {% endcomment %}
+        {{ registro_he }}
+    {% endfor %}
+    {% comment %} <a href="{% url 'funcionarios:create' %}" class="btn btn-info">
+        Novo funcionário
+    </a> {% endcomment %}
+{% endblock main %}
