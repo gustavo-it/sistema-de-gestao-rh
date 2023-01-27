@@ -5,5 +5,5 @@ from .views import DocumentoCreate
 app_name = 'documentos'
 
 urlpatterns = [
-    path('novo/', DocumentoCreate.as_view(), name='create'),
+    path('novo/<int:funcionario_id>/', DocumentoCreate.as_view(), name='create'),
 ]
