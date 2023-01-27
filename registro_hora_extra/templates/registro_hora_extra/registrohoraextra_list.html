@@ -6,12 +6,15 @@
        <a href="{% url 'registro_hora_extra:update' registro_he.id %}">
             {{ registro_he }}
         </a>
-        {% comment %} <a href="{% url 'funcionarios:delete' registro_he.id %}">
+        <a href="{% url 'registro_hora_extra:delete' registro_he.id %}">
             Deletar
-        </a>  {% endcomment %}
+        </a>
 
     {% endfor %}
     {% comment %} <a href="{% url 'funcionarios:create' %}" class="btn btn-info">
         Novo funcionário
     </a> {% endcomment %}
+    {% if not object_list %}
+    <h3>Não existe registro de hora extra no banco de dados</h3>
+    {% endif %}
 {% endblock main %}
