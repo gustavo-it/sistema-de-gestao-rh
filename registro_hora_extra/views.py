@@ -1,4 +1,4 @@
-from django.views.generic import ListView
+from django.views.generic import ListView, UpdateView
 
 from .models import RegistroHoraExtra
 
@@ -10,3 +10,8 @@ class HoraExtraList(ListView):
         empresa_logada = self.request.user.funcionario.empresa
         queryset = RegistroHoraExtra.objects.filter(funcionario__empresa=empresa_logada)
         return queryset
+    
+    
+class HoraExtraEdit(UpdateView):
+    model = RegistroHoraExtra
+    fields = ['motivo', 'funcionario', 'horas']
